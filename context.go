@@ -69,7 +69,7 @@ type Context interface {
 	TimeRemaining() (remaining time.Duration, timeoutPresent bool)
 
 	// Cancel cancels the current context and all child contexts with
-	// ErrTimeout.  The call is a no-op for contexts that have already been
+	// ErrCanceled.  The call is a no-op for contexts that have already been
 	// canceled.
 	Cancel()
 
